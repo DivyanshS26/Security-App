@@ -72,7 +72,7 @@ router.post('/security', async (req, res) => {
             subject: "Checked-in successfully",
             text: `Hello ${newPerson.name}, you checked-in at ${dateandtime}.`
         };
-        // sgMail.send(msg);
+        sgMail.send(msg);
 
         await Security.create(newPerson);
         req.flash('success', 'New Entry created Successfully!!')
@@ -157,7 +157,7 @@ router.delete('/security/:id', async (req, res) => {
             subject: "Checked-out successfully",
             text: `Hello ${newPerson.name}, you checked-out at ${dateandtime}.`
         };
-        // sgMail.send(msg);
+        sgMail.send(msg);
         req.flash('success', 'Checked Out Succesfully')
         await Security.findByIdAndDelete(id);
         res.redirect('/security');

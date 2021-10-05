@@ -42,7 +42,7 @@ const securityRoutes = require('./routes/securityRoute');
 // seedDb();
 
 app.get('/', (req, res) => {
-    res.send('connected');
+    res.render('security/index');
 })
 
 app.use(securityRoutes);
