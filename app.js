@@ -41,11 +41,11 @@ const securityRoutes = require('./routes/securityRoute');
 
 // seedDb();
 
+app.use(securityRoutes);
+
 app.get('/', (req, res) => {
     res.render('security/index');
 })
-
-app.use(securityRoutes);
 
 app.get('/error', (req, res) => {
     res.render('error');
