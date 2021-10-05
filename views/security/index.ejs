@@ -1,0 +1,28 @@
+<%- include('../partials/header') %>
+<%- include('../partials/navbar') %>
+
+
+<main class="container">
+    <%- include("../partials/flash") %>
+
+    <div class="row crd">
+        
+        <% for(let persons of person) {%> 
+            <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                <div class="card-header"><%= persons.name %> </div>
+                <div class="card-body">
+                <h5 class="card-title">Check in at: <%= persons.checkIn %> </h5>
+                <p class="card-text">Phone: <%= persons.phone %> </p>
+                <p class="card-text">Email: <%= persons.email %> </p>
+                <p class="card-text">Current Status: In the Office </p>
+                <a href="/security/<%= persons._id %>" class="btn btn-light">Show</a>
+                </div>
+            </div>
+        <% } %>
+
+    </div>
+
+</main>
+
+
+<%- include('../partials/footer') %>

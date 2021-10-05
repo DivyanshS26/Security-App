@@ -1,0 +1,25 @@
+<%- include('../partials/header') %>
+<%- include('../partials/navbar') %>
+
+    <main class="container">
+        <%- include("../partials/flash") %>
+        <div class="card border-success mb-3" style="max-width: 18rem;">
+            <div class="card-header h4 bg-transparent border-success"><%= person.name %> </div>
+            <div class="card-body text-success">
+              <h5 class="card-title">Check In at: <%= person.checkIn %></h5>
+              <p class="card-text">Phone: <%= person.phone %></p>
+              <p class="card-text">Email: <%= person.email %></p>
+              <p class="card-text">Current Status: In the Office</p>
+            </div>
+            <div class="card-footer bg-transparent border-success">
+                <a href="/security/<%= person._id %>/edit" class="btn btn-outline-small btn-warning">Edit</a>
+                <form class="d-inline-block" action="/security/<%= person._id %>?_method=DELETE" method="POST">
+                    <button class="btn btn-outline-small btn-danger">Check Out</button>
+                </form>
+            </div>
+          </div>
+        </main>
+
+
+<%- include('../partials/footer') %>
+

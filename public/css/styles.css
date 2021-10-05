@@ -1,0 +1,32 @@
+body{
+    background-color: #fff3b0;
+}
+a{
+    text-decoration: none;
+    color: #335c67;
+}
+.navbar-brand{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3rem;
+    /* text-align: center;
+    margin: 15px auto;
+    padding: 10px; */
+    
+}
+.card{
+    margin: 25px auto;
+    padding: 20px;
+}
+
+.crd{
+    margin: 15px auto;
+    border: 1px solid rgb(158, 42, 43);
+    background-color: rgba(158, 42, 43, 0.5);
+    border-radius: 8px;
+    box-shadow: 0px 0px 12px rgb(158, 42, 43);
+}
+
+.hd{
+    margin: 15px auto;
+    padding: 20px;
+}
