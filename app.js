@@ -9,6 +9,7 @@ const path = require('path');
 const methodOverride = require('method-override');
 const seedDb = require('./seed');
 const sgMail = require('@sendgrid/mail');
+sgMail.setApiKey(process.env.Api_key);
 const flash = require('connect-flash');
 const session = require('express-session');
 
@@ -48,7 +49,7 @@ app.get('/', (req, res) => {
 app.get('/error', (req, res) => {
     res.render('error');
 })
-sgMail.setApiKey(process.env.Api_Key);
+
 app.use(securityRoutes);
 
 app.listen(process.env.PORT || 2323, () => {
