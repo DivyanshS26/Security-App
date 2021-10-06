@@ -41,7 +41,6 @@ const securityRoutes = require('./routes/securityRoute');
 
 // seedDb();
 
-app.use(securityRoutes);
 
 app.get('/', (req, res) => {
     res.render('home');
@@ -50,6 +49,8 @@ app.get('/', (req, res) => {
 app.get('/error', (req, res) => {
     res.render('error');
 })
+
+app.use(securityRoutes);
 
 app.listen(process.env.PORT || 2323, () => {
     console.log("Server started at 2323");
