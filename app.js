@@ -44,7 +44,7 @@ const securityRoutes = require('./routes/securityRoute');
 app.use(securityRoutes);
 
 app.get('/', (req, res) => {
-    res.render('security/index');
+    res.render('home');
 })
 
 app.get('/error', (req, res) => {
